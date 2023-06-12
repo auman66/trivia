@@ -20,6 +20,7 @@ exports.handler = async function (context, event, callback) {
       let qs = {};
       records.forEach((r) => {
         qs[r.fields.qNum] = {
+          q_id: r.getId(),
           question: r.fields.question,
           answer: r.fields.answer,
         };

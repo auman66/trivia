@@ -7,6 +7,7 @@ const questions = JSON.parse(openFile());
 
 const qCount = Object.keys(questions).length;
 
+// Input: array of asked questions in the form "1-2-3"
 exports.handler = (context, event, callback) => {
   const asked = event.asked.split("-");
   const all_qs = [...Array(qCount).keys()].map((q) => (++q).toString());
@@ -14,10 +15,13 @@ exports.handler = (context, event, callback) => {
     return !asked.includes(q);
   });
   const qNum = avail_qs[Math.floor(Math.random() * avail_qs.length)];
+
+  // Output: question number, question, & correct answer
   resp = {
     qNum,
     question: questions[qNum].question,
     answer: questions[qNum].answer,
+    q_id: questions[qNum].q_id,
   };
 
   return callback(null, resp);
