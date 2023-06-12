@@ -1,0 +1,14 @@
+{
+    "1": {
+        "question": "What is the capital of Colorado?\nA. Leadville\nB. Denver\nC. Colorado Springs\nD. Fort Collins",
+        "answer": "B"
+    },
+    "2": {
+        "question": "Which National Park is in Colorado?\nA. Zion\nB. Arches\nC. Moab\nD. Rocky Mountain",
+        "answer": "D"
+    },
+    "3": {
+        "question": "What is the state flower of Colorado?\nA. Columbine\nB. Tulip\nC. Thistle\nD. Rose",
+        "answer": "A"
+    }
+}
