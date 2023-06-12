@@ -14,6 +14,9 @@ exports.handler = (context, event, callback) => {
   const avail_qs = all_qs.filter((q) => {
     return !asked.includes(q);
   });
+  if (avail_qs.length <= 0) {
+    return callback(null, { end: true });
+  }
   const qNum = avail_qs[Math.floor(Math.random() * avail_qs.length)];
 
   // Output: question number, question, & correct answer
@@ -22,6 +25,7 @@ exports.handler = (context, event, callback) => {
     question: questions[qNum].question,
     answer: questions[qNum].answer,
     q_id: questions[qNum].q_id,
+    end: false,
   };
 
   return callback(null, resp);

@@ -14,7 +14,7 @@ exports.handler = async function (context, event, callback) {
   //Find or create the player
   let player = await base("Players")
     .select({
-      filterByFormula: `{phone}=${event.phone}`,
+      filterByFormula: `{phone}=${event.phone.substring(1)}`,
     })
     .all()
     .then((records) => {
