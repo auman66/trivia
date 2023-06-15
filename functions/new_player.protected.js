@@ -13,26 +13,26 @@ const base = new airtable({
 exports.handler = async function (context, event, callback) {
   //Find or create the player
   let player = await base("Players")
-    .select({
-      filterByFormula: `{phone}=${event.phone.substring(1)}`,
-    })
-    .all()
+    .create([
+      {
+        fields: {
+          phone: event.phone,
+          name: event.name,
+        },
+      },
+    ])
     .then((records) => {
-      if (records.length > 0) {
-        return {
-          id: records[0].getId(),
-          asked: records[0].fields.asked || "",
-          name: records[0].fields.name,
-          score: records[0].fields.score,
-          new_player: false,
-        };
-        // If no player is found, new player needed
-      } else
-        return {
-          new_player: true,
-        };
+      return {
+        id: records[0].getId(),
+        asked: "",
+        name: event.name,
+        score: 0,
+      };
     })
     .catch((err) => console.error(err));
+
+  // response.player = player;
+  // console.log(player.asked.join("-"));
 
   callback(null, player);
 };

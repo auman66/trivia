@@ -23,6 +23,8 @@ exports.handler = async function (context, event, callback) {
           q_id: r.getId(),
           question: r.fields.question,
           answer: r.fields.answer,
+          correct: r.fields.correct_text,
+          incorrect: r.fields.incorrect_text,
         };
       });
       return qs;

@@ -20,13 +20,8 @@ exports.handler = (context, event, callback) => {
   const qNum = avail_qs[Math.floor(Math.random() * avail_qs.length)];
 
   // Output: question number, question, & correct answer
-  resp = {
-    qNum,
-    question: questions[qNum].question,
-    answer: questions[qNum].answer,
-    q_id: questions[qNum].q_id,
-    end: false,
-  };
+  const resp = questions[qNum];
+  resp["qNum"] = qNum;
 
   return callback(null, resp);
 };

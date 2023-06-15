@@ -14,6 +14,7 @@ exports.handler = async function (context, event, callback) {
   const player_ans = event.player_ans.trim().toUpperCase();
   const is_correct = player_ans == event.correct_ans;
   const asked = event.asked ? event.asked + "-" + event.qNum : event.qNum;
+  const qCount = asked.split("-").length;
 
   let save = await base("QnA")
     .create([
@@ -33,5 +34,5 @@ exports.handler = async function (context, event, callback) {
       return "error";
     });
 
-  callback(null, { is_correct, asked });
+  callback(null, { is_correct, asked, qCount });
 };
