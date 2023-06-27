@@ -1,0 +1,673 @@
+{
+    "description": "A New Flow",
+    "states": [
+      {
+        "name": "Trigger",
+        "type": "trigger",
+        "transitions": [
+          {
+            "next": "GetPlayer",
+            "event": "incomingMessage"
+          },
+          {
+            "event": "incomingCall"
+          },
+          {
+            "event": "incomingConversationMessage"
+          },
+          {
+            "event": "incomingRequest"
+          },
+          {
+            "event": "incomingParent"
+          }
+        ],
+        "properties": {
+          "offset": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      },
+      {
+        "name": "GetPlayer",
+        "type": "run-function",
+        "transitions": [
+          {
+            "next": "is_new_player",
+            "event": "success"
+          },
+          {
+            "event": "fail"
+          }
+        ],
+        "properties": {
+          "service_sid": "ZS10800c26c290ae58cbf0c70ec4f53e4b",
+          "environment_sid": "ZE071caa3652bc953bcabf7272486bce5f",
+          "offset": {
+            "x": -740,
+            "y": 220
+          },
+          "function_sid": "ZH9bf052d1029c499c96a152a2915e5030",
+          "parameters": [
+            {
+              "value": "{{trigger.message.From}}",
+              "key": "phone"
+            }
+          ],
+          "url": "https://canada-trivia-4826-dev.twil.io/get_player"
+        }
+      },
+      {
+        "name": "GetQuestion",
+        "type": "run-function",
+        "transitions": [
+          {
+            "next": "moreQuestions",
+            "event": "success"
+          },
+          {
+            "event": "fail"
+          }
+        ],
+        "properties": {
+          "service_sid": "ZS10800c26c290ae58cbf0c70ec4f53e4b",
+          "environment_sid": "ZE071caa3652bc953bcabf7272486bce5f",
+          "offset": {
+            "x": 570,
+            "y": 480
+          },
+          "function_sid": "ZHeac1eb0cfab88b14ba9b467ba5337eed",
+          "parameters": [
+            {
+              "value": "{{flow.variables.asked}}",
+              "key": "asked"
+            }
+          ],
+          "url": "https://canada-trivia-4826-dev.twil.io/get_q"
+        }
+      },
+      {
+        "name": "ask_question",
+        "type": "send-and-wait-for-reply",
+        "transitions": [
+          {
+            "next": "is_valid_answer",
+            "event": "incomingMessage"
+          },
+          {
+            "event": "timeout"
+          },
+          {
+            "event": "deliveryFailure"
+          }
+        ],
+        "properties": {
+          "offset": {
+            "x": 50,
+            "y": 1390
+          },
+          "service": "{{trigger.message.InstanceSid}}",
+          "channel": "{{trigger.message.ChannelSid}}",
+          "from": "{{flow.channel.address}}",
+          "body": "{% if flow.variables.resendQ == 'true' %}Please only answer with A, B, C, or D!\n{% else %} {{flow.variables.name}}, here is your question:{% endif %}\n{{widgets.GetQuestion.parsed.question}}",
+          "timeout": "3600"
+        }
+      },
+      {
+        "name": "is_valid_answer",
+        "type": "split-based-on",
+        "transitions": [
+          {
+            "next": "resend_q",
+            "event": "noMatch"
+          },
+          {
+            "next": "CheckAns",
+            "event": "match",
+            "conditions": [
+              {
+                "friendly_name": "Valid",
+                "arguments": [
+                  "{{widgets.ask_question.inbound.Body}}"
+                ],
+                "type": "matches_any_of",
+                "value": "A, a, B, b, C, c, D, d"
+              }
+            ]
+          }
+        ],
+        "properties": {
+          "input": "{{widgets.ask_question.inbound.Body}}",
+          "offset": {
+            "x": 50,
+            "y": 1770
+          }
+        }
+      },
+      {
+        "name": "first_attempt_send",
+        "type": "set-variables",
+        "transitions": [
+          {
+            "next": "ask_question",
+            "event": "next"
+          }
+        ],
+        "properties": {
+          "variables": [
+            {
+              "value": "false",
+              "key": "resendQ"
+            }
+          ],
+          "offset": {
+            "x": 70,
+            "y": 1030
+          }
+        }
+      },
+      {
+        "name": "resend_q",
+        "type": "set-variables",
+        "transitions": [
+          {
+            "next": "ask_question",
+            "event": "next"
+          }
+        ],
+        "properties": {
+          "variables": [
+            {
+              "value": "true",
+              "key": "resendQ"
+            }
+          ],
+          "offset": {
+            "x": 360,
+            "y": 1580
+          }
+        }
+      },
+      {
+        "name": "CheckAns",
+        "type": "run-function",
+        "transitions": [
+          {
+            "next": "send_to_airtable",
+            "event": "success"
+          },
+          {
+            "event": "fail"
+          }
+        ],
+        "properties": {
+          "service_sid": "ZS10800c26c290ae58cbf0c70ec4f53e4b",
+          "environment_sid": "ZE071caa3652bc953bcabf7272486bce5f",
+          "offset": {
+            "x": 170,
+            "y": 2060
+          },
+          "function_sid": "ZHc5eb168dc800abfb078fa514c008fb41",
+          "parameters": [
+            {
+              "value": "{{widgets.GetQuestion.parsed.qNum}}",
+              "key": "qNum"
+            },
+            {
+              "value": "{{widgets.GetQuestion.parsed.answer}}",
+              "key": "correct_ans"
+            },
+            {
+              "value": "{{widgets.GetQuestion.parsed.q_id}}",
+              "key": "q_id"
+            },
+            {
+              "value": "{{flow.variables.pid}}",
+              "key": "player_id"
+            },
+            {
+              "value": "{{flow.variables.asked}}",
+              "key": "asked"
+            },
+            {
+              "value": "{{widgets.ask_question.inbound.Body}}",
+              "key": "player_ans"
+            }
+          ],
+          "url": "https://canada-trivia-4826-dev.twil.io/check_answer"
+        }
+      },
+      {
+        "name": "update_asked",
+        "type": "set-variables",
+        "transitions": [
+          {
+            "next": "isCorrect",
+            "event": "next"
+          }
+        ],
+        "properties": {
+          "variables": [
+            {
+              "value": "{{widgets.CheckAns.parsed.asked}}",
+              "key": "asked"
+            },
+            {
+              "value": "{{widgets.CheckAns.parsed.qCount}}",
+              "key": "qCount"
+            }
+          ],
+          "offset": {
+            "x": -50,
+            "y": 2630
+          }
+        }
+      },
+      {
+        "name": "isCorrect",
+        "type": "split-based-on",
+        "transitions": [
+          {
+            "next": "wrong",
+            "event": "noMatch"
+          },
+          {
+            "next": "increment_score",
+            "event": "match",
+            "conditions": [
+              {
+                "friendly_name": "Correct Answer",
+                "arguments": [
+                  "{{widgets.CheckAns.parsed.is_correct}}"
+                ],
+                "type": "equal_to",
+                "value": "true"
+              }
+            ]
+          }
+        ],
+        "properties": {
+          "input": "{{widgets.CheckAns.parsed.is_correct}}",
+          "offset": {
+            "x": 840,
+            "y": 2790
+          }
+        }
+      },
+      {
+        "name": "correct",
+        "type": "send-and-wait-for-reply",
+        "transitions": [
+          {
+            "next": "GetQuestion",
+            "event": "incomingMessage"
+          },
+          {
+            "event": "timeout"
+          },
+          {
+            "event": "deliveryFailure"
+          }
+        ],
+        "properties": {
+          "offset": {
+            "x": 1420,
+            "y": 3400
+          },
+          "service": "{{trigger.message.InstanceSid}}",
+          "channel": "{{trigger.message.ChannelSid}}",
+          "from": "{{flow.channel.address}}",
+          "body": "{{widgets.GetQuestion.parsed.correct}} \nYou have answered {{flow.variables.score}} of {{widgets.CheckAns.parsed.qCount}}  asked questions correctly!\n\nReply to this message to get the next question.",
+          "timeout": "3600"
+        }
+      },
+      {
+        "name": "wrong",
+        "type": "send-and-wait-for-reply",
+        "transitions": [
+          {
+            "next": "GetQuestion",
+            "event": "incomingMessage"
+          },
+          {
+            "event": "timeout"
+          },
+          {
+            "event": "deliveryFailure"
+          }
+        ],
+        "properties": {
+          "offset": {
+            "x": 890,
+            "y": 3110
+          },
+          "service": "{{trigger.message.InstanceSid}}",
+          "channel": "{{trigger.message.ChannelSid}}",
+          "from": "{{flow.channel.address}}",
+          "body": "{{widgets.GetQuestion.parsed.incorrect}} \nYou have answered {{flow.variables.score}} of {{widgets.CheckAns.parsed.qCount}}  asked questions correctly!\nReply to this message to get the next question.",
+          "timeout": "3600"
+        }
+      },
+      {
+        "name": "moreQuestions",
+        "type": "split-based-on",
+        "transitions": [
+          {
+            "next": "first_attempt_send",
+            "event": "noMatch"
+          },
+          {
+            "next": "send_all_done",
+            "event": "match",
+            "conditions": [
+              {
+                "friendly_name": "No more questions",
+                "arguments": [
+                  "{{widgets.GetQuestion.parsed.end}}"
+                ],
+                "type": "equal_to",
+                "value": "true"
+              }
+            ]
+          }
+        ],
+        "properties": {
+          "input": "{{widgets.GetQuestion.parsed.end}}",
+          "offset": {
+            "x": 50,
+            "y": 750
+          }
+        }
+      },
+      {
+        "name": "send_all_done",
+        "type": "send-message",
+        "transitions": [
+          {
+            "event": "sent"
+          },
+          {
+            "event": "failed"
+          }
+        ],
+        "properties": {
+          "offset": {
+            "x": 1210,
+            "y": 790
+          },
+          "service": "{{trigger.message.InstanceSid}}",
+          "channel": "{{trigger.message.ChannelSid}}",
+          "from": "{{flow.channel.address}}",
+          "to": "{{contact.channel.address}}",
+          "body": "You got through all the questions\n\nYour final score is {{flow.variables.score}} correct out of a possible {{flow.variables.qCount}} . Great work!"
+        }
+      },
+      {
+        "name": "prompt_name",
+        "type": "send-and-wait-for-reply",
+        "transitions": [
+          {
+            "next": "NewPlayer",
+            "event": "incomingMessage"
+          },
+          {
+            "event": "timeout"
+          },
+          {
+            "event": "deliveryFailure"
+          }
+        ],
+        "properties": {
+          "offset": {
+            "x": -700,
+            "y": 1470
+          },
+          "service": "{{trigger.message.InstanceSid}}",
+          "channel": "{{trigger.message.ChannelSid}}",
+          "from": "{{flow.channel.address}}",
+          "body": "Welcome to Twilio's Trivia Game! \n\n\n\nWhat name should we use for the leader board?\nIt can be your real name or pseudonym. Try to make it identifyable and please keep it clean!",
+          "timeout": "3600"
+        }
+      },
+      {
+        "name": "increment_score",
+        "type": "set-variables",
+        "transitions": [
+          {
+            "next": "correct",
+            "event": "next"
+          }
+        ],
+        "properties": {
+          "variables": [
+            {
+              "value": "{{flow.variables.score | plus: 1}}",
+              "key": "score"
+            }
+          ],
+          "offset": {
+            "x": 1390,
+            "y": 3080
+          }
+        }
+      },
+      {
+        "name": "is_new_player",
+        "type": "split-based-on",
+        "transitions": [
+          {
+            "next": "set_return_player",
+            "event": "noMatch"
+          },
+          {
+            "next": "send_disclaimer",
+            "event": "match",
+            "conditions": [
+              {
+                "friendly_name": "Player is new",
+                "arguments": [
+                  "{{widgets.GetPlayer.parsed.new_player}}"
+                ],
+                "type": "equal_to",
+                "value": "true"
+              }
+            ]
+          }
+        ],
+        "properties": {
+          "input": "{{widgets.GetPlayer.parsed.new_player}}",
+          "offset": {
+            "x": -840,
+            "y": 510
+          }
+        }
+      },
+      {
+        "name": "NewPlayer",
+        "type": "run-function",
+        "transitions": [
+          {
+            "next": "set_new-player",
+            "event": "success"
+          },
+          {
+            "event": "fail"
+          }
+        ],
+        "properties": {
+          "service_sid": "ZS10800c26c290ae58cbf0c70ec4f53e4b",
+          "environment_sid": "ZE071caa3652bc953bcabf7272486bce5f",
+          "offset": {
+            "x": -690,
+            "y": 1720
+          },
+          "function_sid": "ZH8e127f2a5c3954dc6da1af4b2ad7a518",
+          "parameters": [
+            {
+              "value": "{{trigger.message.From}}",
+              "key": "phone"
+            },
+            {
+              "value": "{{widgets.prompt_name.inbound.Body}}",
+              "key": "name"
+            }
+          ],
+          "url": "https://canada-trivia-4826-dev.twil.io/new_player"
+        }
+      },
+      {
+        "name": "set_return_player",
+        "type": "set-variables",
+        "transitions": [
+          {
+            "next": "GetQuestion",
+            "event": "next"
+          }
+        ],
+        "properties": {
+          "variables": [
+            {
+              "value": "{{widgets.GetPlayer.parsed.asked}}",
+              "key": "asked"
+            },
+            {
+              "value": "{{widgets.GetPlayer.parsed.score}}",
+              "key": "score"
+            },
+            {
+              "value": "{{widgets.GetPlayer.parsed.id}}",
+              "key": "pid"
+            },
+            {
+              "value": "{{widgets.GetPlayer.parsed.name}}",
+              "key": "name"
+            },
+            {
+              "value": "{{widgets.GetPlayer.parsed.qCount}}",
+              "key": "qCount"
+            }
+          ],
+          "offset": {
+            "x": -1000,
+            "y": 750
+          }
+        }
+      },
+      {
+        "name": "set_new-player",
+        "type": "set-variables",
+        "transitions": [
+          {
+            "next": "GetQuestion",
+            "event": "next"
+          }
+        ],
+        "properties": {
+          "variables": [
+            {
+              "value": "{{widgets.NewPlayer.parsed.asked}}",
+              "key": "asked"
+            },
+            {
+              "value": "{{widgets.NewPlayer.parsed.score}}",
+              "key": "score"
+            },
+            {
+              "value": "{{widgets.NewPlayer.parsed.id}}",
+              "key": "pid"
+            },
+            {
+              "value": "{{widgets.NewPlayer.parsed.name}}",
+              "key": "name"
+            }
+          ],
+          "offset": {
+            "x": -690,
+            "y": 1970
+          }
+        }
+      },
+      {
+        "name": "send_disclaimer",
+        "type": "send-message",
+        "transitions": [
+          {
+            "next": "delay5s",
+            "event": "sent"
+          },
+          {
+            "event": "failed"
+          }
+        ],
+        "properties": {
+          "offset": {
+            "x": -690,
+            "y": 1000
+          },
+          "service": "{{trigger.message.InstanceSid}}",
+          "channel": "{{trigger.message.ChannelSid}}",
+          "from": "{{flow.channel.address}}",
+          "to": "{{contact.channel.address}}",
+          "body": "Welcome to Twilio's Trivia Game!\n\nDisclaimer:We only use your phone number for playing this game with you and redact all phone numbers from player information. In the meantime check out this repo https://twil.io/trivia if you want to see how we built this app."
+        }
+      },
+      {
+        "name": "delay5s",
+        "type": "run-function",
+        "transitions": [
+          {
+            "next": "prompt_name",
+            "event": "success"
+          },
+          {
+            "next": "prompt_name",
+            "event": "fail"
+          }
+        ],
+        "properties": {
+          "service_sid": "ZS10800c26c290ae58cbf0c70ec4f53e4b",
+          "environment_sid": "ZE071caa3652bc953bcabf7272486bce5f",
+          "offset": {
+            "x": -700,
+            "y": 1240
+          },
+          "function_sid": "ZH426f6339125ec821060789236bbc85fa",
+          "parameters": [
+            {
+              "value": "5000",
+              "key": "delay"
+            }
+          ],
+          "url": "https://canada-trivia-4826-dev.twil.io/delay"
+        }
+      },
+      {
+        "name": "send_to_airtable",
+        "type": "make-http-request",
+        "transitions": [
+          {
+            "next": "update_asked",
+            "event": "success"
+          },
+          {
+            "event": "failed"
+          }
+        ],
+        "properties": {
+          "offset": {
+            "x": 0,
+            "y": 2350
+          },
+          "method": "POST",
+          "content_type": "application/json;charset=utf-8",
+          "body": "{\n \"question\":\"{{widgets.GetQuestion.parsed.q_id}}\",\n \"player_answer\":\"{{widgets.ask_question.inbound.Body}}\",\n \"correct\":{{widgets.CheckAns.parsed.is_correct}},\n \"player\":\"{{flow.variables.pid}}\"\n}",
+          "url": "https://hooks.airtable.com/workflows/v1/genericWebhook/appysOmdeBaBcPdxM/wflkTCC3kKdQvCaDC/wtrJ2hPEsR54Ip4Ll"
+        }
+      }
+    ],
+    "initial_state": "Trigger",
+    "flags": {
+      "allow_concurrent_calls": true
+    }
+  }

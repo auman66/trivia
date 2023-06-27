@@ -26,6 +26,7 @@ exports.handler = async function (context, event, callback) {
           asked: records[0].fields.asked || "",
           name: records[0].fields.name,
           score: records[0].fields.score,
+          qCount: records[0].fields.qCount,
           new_player: false,
         };
         // If no player is found, new player needed
