@@ -8,13 +8,15 @@ const base = new airtable({
   apiKey: AIRTABLE_API_KEY,
 }).base(AIRTABLE_BASE_ID);
 
+const md5 = require("md5");
+
 //Twilio function call
 //Params: phone
 exports.handler = async function (context, event, callback) {
   //Find or create the player
   let player = await base("Players")
     .select({
-      filterByFormula: `{phone}=${event.phone.substring(1)}`,
+      filterByFormula: `{playerID}='${md5(`collision${event.phone}`)}'`,
     })
     .all()
     .then((records) => {
