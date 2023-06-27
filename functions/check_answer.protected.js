@@ -16,23 +16,5 @@ exports.handler = async function (context, event, callback) {
   const asked = event.asked ? event.asked + "-" + event.qNum : event.qNum;
   const qCount = asked.split("-").length;
 
-  let save = await base("QnA")
-    .create([
-      {
-        fields: {
-          question: [event.q_id],
-          player_answer: player_ans,
-          correct: is_correct,
-          player: [event.player_id],
-        },
-      },
-    ])
-    .then((r) => {
-      return "saved";
-    })
-    .catch((r) => {
-      return "error";
-    });
-
   callback(null, { is_correct, asked, qCount });
 };
