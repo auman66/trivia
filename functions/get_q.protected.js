@@ -1,3 +1,5 @@
+// This function gets a random, unasked question from the questions JSON.
+
 // Access the open helper method for the Asset
 const openFile = Runtime.getAssets()["/questions.json"].open;
 

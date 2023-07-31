@@ -1,3 +1,5 @@
+// This function checks airtable for an existing player and, if found, pull that players information
+
 //Set up Airtable
 const AIRTABLE_API_KEY = process.env.AIRTABLE_API_KEY;
 const AIRTABLE_BASE_ID = process.env.AIRTABLE_BASE_ID;

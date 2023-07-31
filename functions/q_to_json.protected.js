@@ -1,3 +1,5 @@
+// This function is only used locally to pull down and store questions from airtable. 
+
 //Set up Airtable
 const AIRTABLE_API_KEY = process.env.AIRTABLE_API_KEY;
 const AIRTABLE_BASE_ID = process.env.AIRTABLE_BASE_ID;
