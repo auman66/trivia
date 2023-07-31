@@ -1,4 +1,4 @@
-// This function is only used locally to pull down and store questions from airtable. 
+// This function is only used locally to pull down and store questions from airtable.
 
 //Set up Airtable
 const AIRTABLE_API_KEY = process.env.AIRTABLE_API_KEY;
@@ -14,19 +14,21 @@ const base = new airtable({
 //Params: question, correct_ans, player_ans
 exports.handler = async function (context, event, callback) {
   //Find or create the player
-  console.log("here I am");
   let questions = await base("Questions")
     .select()
     .all()
     .then((records) => {
       let qs = {};
       records.forEach((r) => {
+        // console.log(r);
         qs[r.fields.qNum] = {
           q_id: r.getId(),
           question: r.fields.question,
           answer: r.fields.answer,
           correct: r.fields.correct_text,
           incorrect: r.fields.incorrect_text,
+          a_media: r.fields.response_media,
+          q_media: r.fields.question_media,
         };
       });
       return qs;

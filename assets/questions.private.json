@@ -1,142 +1,151 @@
 {
     "1": {
-        "q_id": "recu9sCUn8saXAM82",
-        "question": "What is the capital of Ontario?\nA. Ottawa\nB. Toronto\nC. Kingston\nD. Waterloo",
+        "q_id": "rec9ZTNKn80ZtNhMW",
+        "question": "What is the capital of Colorado?\nA. Leadville\nB. Denver\nC. Colorado Springs\nD. Pueblo",
         "answer": "B",
-        "correct": "Way to go. It is Toronto!",
-        "incorrect": "Province & state capitals aren't always the biggest city, but in this case it is indeed Toronto."
+        "correct": "Thats right! Denver is the capital of Colorado.",
+        "incorrect": "Sorry, but the correct answer is Denver.",
+        "a_media": "https://trivia-v2-1254-dev.twil.io/images/q1-capital-r.jpeg"
     },
     "2": {
-        "q_id": "rec7UoDnwgNi1XPIK",
-        "question": "What is Canada's largest Metropolitan area?\nA. Toronto\nB. Calgary\nC. Vancouver\nD. Montreal",
-        "answer": "A",
-        "correct": "You got it. Toronto is Canada's largest metropolitan with over 6 million people.",
-        "incorrect": "Wrong answer. Toronto is Canada's largest metropolitan with over 6 million people."
+        "q_id": "recMKPOdwgl7xakmE",
+        "question": "Which National Park is in Colorado?\nA. Zion\nB. Arches\nC. Moab\nD. Great Sand Dunes ",
+        "answer": "D",
+        "correct": "You got it. Colorado is home to Great Sand Dunes National Park, along with Rocky Mountain, Black Canyon of the Gunnison, and Mesa Verde",
+        "incorrect": "Wrong answer. Colorado is home to Great Sand Dunes National Park. All the other parks listed are in Utah."
     },
     "3": {
-        "q_id": "recKYo9aO5b23cwx7",
-        "question": "What rank is the Trans-Canada Highway amongst the longest highways in the world?\nA. 1\nB. 2\nC. 3\nD. 4",
-        "answer": "D",
-        "correct": "That is correct. Trans-Canada Highway is fourth - Total length: 4,860 miles (7,821 km)",
-        "incorrect": "Sorry, but Trans-Canada Highway is fourth - Total length: 4,860 miles (7,821 km)"
+        "q_id": "recpOPk0O5JRzp1b1",
+        "question": "What is the state flower of Colorado?\nA. Columbine\nB. Tulip\nC. Thistle\nD. Rose",
+        "answer": "A",
+        "correct": "It is the Columbine.",
+        "incorrect": "Sorry, but the state flower of Colorado is the Columbine",
+        "a_media": "https://trivia-v2-1254-dev.twil.io/images/q3-columbine-r.jpeg"
     },
     "4": {
-        "q_id": "recKFYf5NnZtqNtS6",
-        "question": "Which of the following bays in Canada have the highest tides in the world?\nA. Hudson Bay\nB. Baffin Bay\nC. Bay of Fundy\nD. James Bay",
+        "q_id": "recpvpqVNnxiW0Yw0",
+        "question": "Which Colorado city holds the record as the highest incorporated city in the US?\nA. Alma\nB. Fairplay\nC. Leadville\nD. Breckenridge",
         "answer": "C",
-        "correct": "Thats right - The highest tides in the world can be found in Canada at the Bay of Fundy.",
-        "incorrect": "Not quite. The highest tides in the world can be found in Canada at the Bay of Fundy."
+        "correct": "Thats right - Leadville is the highest incorporated city.",
+        "incorrect": "Not quite. Leadville is the highest incorporated city in the US (although Alma is the highest town in Colorado)"
     },
     "5": {
-        "q_id": "recocSRE01BGTVJlR",
-        "question": "How many NBA championships have the Toronto Raptors won?\nA. 2\nB. 3\nC. 1\nD. 0",
+        "q_id": "rec32j2u019vp8eZL",
+        "question": "How many championships has Denver won in the four major leagues sports (MLB, NBA, NFL, NHL)?\nA. 3\nB. 5\nC. 7\nD. 9",
         "answer": "C",
-        "correct": "You got it - 1, in 2019.",
-        "incorrect": "Nope. The correct answer is 1, in 2019."
+        "correct": "You got it - 7 (3 Avalanche, 3 Broncos, and 1 Nuggets)",
+        "incorrect": "Nope. The correct answer is 7 (3 Avalanche, 3 Broncos, and 1 Nuggets)",
+        "a_media": "https://trivia-v2-1254-dev.twil.io/images/q5-nuggets-r.jpeg"
     },
     "6": {
-        "q_id": "rec1PuF0wd7Gwdhmw",
-        "question": "Which province is the largest producer of Maple Syrup in Canada?\nA. Quebec\nB. Ontario\nC. New Brunswick\nD. Nova Scotia",
+        "q_id": "recGFVQQwdFv2qM0q",
+        "question": "Which of these Denver athletes has NOT won a championship game or series MVP?\nA. Camelo Anthony\nB. John Elway\nC. Nikola Jokic\nD. Cale Makar",
         "answer": "A",
-        "correct": "Correct! Quebec produces 90% of Canada's maple syrup and nearly 72% of maple syrup production worldwide.",
-        "incorrect": "Nope. The correct answer is Quebec produces 90% of Canada's maple syrup and nearly 72% of maple syrup production worldwide."
+        "correct": "Correct! Carmelo Anthony has never won a championship, let alone a finals MVP.",
+        "incorrect": "Nope. The correct answer is Carmelo Anthony. Correct! He has never won a championship, let alone a finals MVP.",
+        "a_media": "https://trivia-v2-1254-dev.twil.io/images/q6-carmelo-anthony-r.jpeg"
     },
     "7": {
-        "q_id": "recEu8y11frF8By97",
-        "question": "Canada houses the biggest uranium mine. What province the biggest Uranium mine located in?\nA. British Columbia\nB. Winnipeg\nC. Alberta\nD. Saskatchewan",
+        "q_id": "recjkzJR1fZuEO3N1",
+        "question": "What is the official name of the large horse statue located at Denver International Airport?\nA. Blucifer\nB. Red Eyes\nC. Bucking Bronco\nD. Blue Mustang",
         "answer": "D",
-        "correct": "Nice work! McArthur River mine located about 620km north of Saskatoon, Saskatchewan, Canada, is currently the world’s largest uranium producing mine.",
-        "incorrect": "Not quite. McArthur River mine located about 620km north of Saskatoon, Saskatchewan, is currently the world’s largest uranium producing mine."
+        "correct": "Nice work! While its nickname is Blucifer its official name is Blue Mustang.",
+        "incorrect": "Not quite. While many people call it Blucifer, its official name is Blue Mustang",
+        "q_media": "https://trivia-v2-1254-dev.twil.io/images/q7-blucifer-q.jpeg"
     },
     "8": {
-        "q_id": "recbuvxsgFfSgKAyT",
-        "question": "What is the highest temperature ever recorded in Toronto?\nA. 49°C / 120F\nB. 40°C / 104F\nC. 36°C / 97F\nD. 29°C / 84F",
+        "q_id": "recQkWIigFNHMX5cN",
+        "question": "What 40 foot tall, blue animal can be found peering into the Colorado’s Convention Center?\nA. Moose\nB. Bear\nC. Mountain Lion\nD. Ox",
         "answer": "B",
-        "correct": "Yep, The highest temperature ever recorded in Toronto, Ontario was 40.6 °C / 104 F which occurred on July 10, 1936.",
-        "incorrect": "Nope, The highest temperature ever recorded in Toronto, Ontario was 40.6 °C / 104 F which occurred on July 10, 1936."
+        "correct": "Yep, it is a bear.",
+        "incorrect": "Nope, its a bear.",
+        "a_media": "https://trivia-v2-1254-dev.twil.io/images/q8-bear-r.jpeg"
     },
     "9": {
-        "q_id": "recIQ3YEq42wZwr7c",
-        "question": "What year did The Great Fire of Toronto happened?\nA. 1966\nB. 1949\nC. 1904\nD. 1889",
+        "q_id": "recnGu9uq4AlvJWL6",
+        "question": "How many 14ers are located in Colorado?\nA. 16\nB. 34\nC. 58\nD. 72",
         "answer": "C",
-        "correct": "Thats right, The Great Fire of Toronto in 1904 destroyed much of the city.",
-        "incorrect": "Not quite. It was 1904 and destroyed much of the city."
+        "correct": "Thats right, its 58! It would be crazy if you knew that because you climbed them all.",
+        "incorrect": "Not quite. Its actually 58."
     },
     "10": {
-        "q_id": "recpaXWgD2dRUeyCs",
-        "question": "Toronto Zoo is the largest zoo in Canada and _________ biggest zoo in the world.\nA. first\nB. third\nC. eight\nD. sixth",
+        "q_id": "rec40o76D2LGqr3gm",
+        "question": "What percent of Colorado's population lives in the city of Denver?\nA. 6%\nB. 12%\nC. 24%\nD. 48%",
         "answer": "B",
-        "correct": "Correct! Toronto Zoo is 710 acres large. And also has 491 species and over 16,000 animals to enjoy.",
-        "incorrect": "Its actually third biggest zoo in the world, 710 acres large. And also has 491 species and over 16,000 animals to enjoy."
+        "correct": "It is 12% - Approximately 713,000 of Colorados 5.8 million residents live in Denver.",
+        "incorrect": "Its actually 12% - Approximately 713,000 of Colorados 5.8 million residents live in Denver."
     },
     "11": {
-        "q_id": "recvqGjIno3DyG6cp",
-        "question": "For how many years was CN Tower the tallest freestanding structure in the World?\nA. 32\nB. 10\nC. 17\nD. 27",
+        "q_id": "recag7uynoBs4TBQj",
+        "question": "Where did DIA rank on the list of busiest airports in the world in 2022?\nA. 3rd\nB. 9th\nC. 18th\nD. 27th",
         "answer": "A",
-        "correct": "Thats right - for 32 years (1975-2007).",
-        "incorrect": "Nope. CN Tower was the freestanding structure in the world for 32 years (1975-2007)."
+        "correct": "Thats right - Denver was the 3rd busiest airport in the US and World in 2022.",
+        "incorrect": "Nope. Its actually the 3rd busiest. Maybe thats why the lines are so long...",
+        "q_media": "https://trivia-v2-1254-dev.twil.io/images/q11-dia-q.jpeg"
     },
     "12": {
-        "q_id": "recAt7yi05lVcvTVC",
-        "question": "Where did National Geographic rank St Lawrence Market in Toronto on their list of top 10 markets in the world? \nA. 7\nB. 4\nC. 3\nD. 1",
+        "q_id": "recfjyJ805TKIIozw",
+        "question": "Which of these food items was first trademarked in Denver?\nA. Ice Cream Cone\nB. Peperoni Pizza\nC. Tomahawk Steak\nD. Cheeseburger",
         "answer": "D",
-        "correct": "You got it! National Geographic ranked St Lawrence Market as the best market in the world! Saturday is the market day, with over 120 retailers",
-        "incorrect": "Nope. National Geographic ranked St Lawrence Market as the best market in the world! Saturday is the market day, with over 120 retailers"
+        "correct": "You got it! In 1935, Louis Ballast melted a slice of cheese on a hamburger at his Denver Humpty Dumpty drive-in restaurant, and patented the invention as the world's first “cheeseburger.\" ",
+        "incorrect": "Nope. In 1935, Louis Ballast melted a slice of cheese on a hamburger at his Denver Humpty Dumpty drive-in restaurant, and patented the invention as the world's first “cheeseburger.\" "
     },
     "13": {
-        "q_id": "rec5RPnbUnKmgOfZ5",
-        "question": "Where does Toronto rank on the list of largest cities in North America by Population?\nA. 2nd\nB. 4th\nC. 7th\nD. 12th",
-        "answer": "B",
-        "correct": "Thats right, at 2.8 million, Toronto is just larger than Chicago.  ",
-        "incorrect": "Its actually the 4th largest city in North America behind Mexico City, New York, and Los Angeles. "
+        "q_id": "recKHgy1UnibM1KDZ",
+        "question": "What is the name of the Colorado Professional Lacrosse (NLL) team who won the championship in 2022? \nA. Mammoth\nB. Rapids\nC. Gold Diggers\nD. Rockies",
+        "answer": "A",
+        "correct": "Thats right! The Mammoth won in 2022 but lost in the finals this year.",
+        "incorrect": "Nope. Its actually the Colorado Mammoth.",
+        "a_media": "https://trivia-v2-1254-dev.twil.io/images/q13-mammoth-r.jpeg"
     },
     "14": {
-        "q_id": "rechWHv8rrMiwHb1g",
-        "question": "What percent of the world's fresh water reserves are located in Canada?\nA. 5%\nB. 10%\nC. 20%\nD. 33%",
-        "answer": "C",
-        "correct": "You go it! Thats a lot of water.",
-        "incorrect": "Nope - its 20%, which is a lot of water."
+        "q_id": "recWM8GYrrk72UGFa",
+        "question": "What is the tallest peak in Colorado?\nA. Pikes Peak\nB. Mount Elbert\nC. Longs Peak\nD. Marron Bells",
+        "answer": "B",
+        "correct": "Yes, indeed! Mount Elbert stands at 14,433 feet.",
+        "incorrect": "Thats incorrect. Its Mount Elbert which stands at 14,433 feet."
     },
     "15": {
-        "q_id": "recQ8dQMhfmLad9Jc",
-        "question": "Ontario is the most populous provinces or territories in Canada, but which has the lowest population?\nA. Prince Edward Island\nB. Northwest Territory\nC. Yukon \nD. Nunavut",
-        "answer": "D",
-        "correct": "You got it. There are only ~37,000 people who live in Nunavut, which has means there are over 50 Sq.Km. per person.",
-        "incorrect": "Not quite. Its Nunavut, which has only 37,000 residence."
+        "q_id": "recvYE1ChfUAGqEn6",
+        "question": "Which Colorado Ski Resort has the largest skiable area?\nA. Snowmass\nB. Keystone\nC. Vail\nD. Winter Park",
+        "answer": "C",
+        "correct": "Right on! While Snowmass has the largestAt 5,317 acres, Vail is the largest by over 2,000 acres.",
+        "incorrect": "That not it. At 5,317 acres, Vail is the largest by over 2,000 acres."
     },
     "16": {
-        "q_id": "recMdwy2XqH4677mg",
-        "question": "What is the official bird of Ontario?\nA. Common Loon\nB. Great Grey Owl\nC. Steller’s Jay\nD. Snowy Owl",
-        "answer": "A",
-        "correct": "Good job getting this bird fact! The common loon is also on the $1 coin.",
-        "incorrect": "Its actually the Common Loon. The other birds belong to other provinces."
+        "q_id": "recr3XJSXqfTCkC0a",
+        "question": "Colorado may look like a rectangle, but how many sides does the state actually have?\nA. 4 (its a rectangle)\nB. 5\nC. 42\nD. 697",
+        "answer": "D",
+        "correct": "Wow, you got it! Cartographers are strange.",
+        "incorrect": "It sounds unbelievable, but the answer is actually 697 (look it up)!"
     },
     "17": {
-        "q_id": "recrTdesJrbvJZcff",
-        "question": "Tim Hortons is the largest food chain in Canada. How many locations do they have in the country?\nA. 3,520\nB. 2,913\nC. 1,428\nD. 1,371",
-        "answer": "A",
-        "correct": "That's right. The values numbers are for Subway, Starbucks, and McDonalds, respectively. ",
-        "incorrect": "Tim Hortons actually has 3,520 locations in Canada! That's right. The other values are for Subway, Starbucks, and McDonalds, respectively. "
+        "q_id": "recbZUkVEsMO1RhD5",
+        "question": "What is the official state fish of Colorado?\nA: Rainbow Trout\nB: Greenback Cutthroat Trout\nC: Largemouth Bass\nD: Northern Pike",
+        "answer": "B",
+        "correct": "Nice job - It is the Greenback Cutthroat Trout! The Rainbow Trout was the unofficial state fish from 1954-1994.",
+        "incorrect": "Its actually the Greenback Cutthroat Trout. Although the Rainbow Trout was the unofficial state fish from 1954-1994.",
+        "a_media": "https://trivia-v2-1254-dev.twil.io/images/q17-trout-r.jpeg"
     },
     "18": {
-        "q_id": "recejjCXzBQHvnm9S",
-        "question": "Canada is a Winter Olympics powerhouse! At which games did they have their best ever result in terms of total metals won?\nA. 1988 Calgary\nB. 2002 Salt Lake City\nC. 2010 Vancouver\nD. 2018 Pyeongchang",
-        "answer": "D",
-        "correct": "You got it! Canada won 29 metals in the 2018 Pyeongchang Winter Olympics.",
-        "incorrect": "Its actually the 2018 Pyeongchang games where Canada won 29 metals."
+        "q_id": "rec3gRgxn4bctpn3z",
+        "question": "What percent of the land in Colorado is owned by the federal government?\nA: 12%\nB: 24%\nC: 36%\nD: 48 %",
+        "answer": "C",
+        "correct": "You got it! The federal government owns 36.2% of the land in Colorado. The Forest Service controls almost 2/3 of this federal land. ",
+        "incorrect": "Not quite, its actually 36%. And the Forest Service controls almost 2/3 of this federal land."
     },
     "19": {
-        "q_id": "recSon0oT66Xhn7kR",
-        "question": "Toronto's own Drake got his start as an actor on Canada's youth soap opera Degrassi, but which in which series did he first appear?\nA. The Kids of Degrassi Street\nB. Degrassi High\nC. Degrassi: The Next Generation\nD. Degrassi: Next Class",
-        "answer": "C",
-        "correct": "Nice work! He played Jimmy Brooks staring in 2001 on Degrassi: The Next Generation.",
-        "incorrect": "Nope. Drake played Jimmy Brooks staring in 2001 on Degrassi: The Next Generation. "
+        "q_id": "recPi197jXYaHJovq",
+        "question": "What is the official nickname of Colorado?\nA: Natural State\nB: Evergreen State\nC: Land of Enchantment\nD: Centennial State",
+        "answer": "D",
+        "correct": "Correct - Colorado is the Centennial State.\nThe Natural State is Arkansas\nThe Evergreen State is Washington\nThe Land of Enchantment is New Mexico",
+        "incorrect": "Wrong Answer - Colorado is the Centennial State.\nThe Natural State is Arkansas\nThe Evergreen State is Washington\nThe Land of Enchantment is New Mexico"
     },
     "20": {
-        "q_id": "recPcuiPBZXlG74zE",
-        "question": "Which of these famous comedians is NOT Canadian?\nA. Mike Myers\nB. Nick Offerman\nC. Jim Carrey\nD. Seth Rogen",
-        "answer": "B",
-        "correct": "Correct! Nick Offerman is American.",
-        "incorrect": "Its actually Nick Offerman, who is American. Mike, Jim, and Seth are all Canadian!"
+        "q_id": "recKwxyIv5v2i7HQc",
+        "question": "Which famous inventor built a lab in Colorado Springs?\nA: Nikola Tesla\nB: Alexander Graham Bell\nC: Henry Ford\nD: Wilbur Wright",
+        "answer": "A",
+        "correct": "Right on! Nikola Tesla chose Colorado Springs for its high number of lighting strikes. ",
+        "incorrect": "Nope. It was Nikola Tesla who chose Colorado Springs for its high number of lighting strikes. "
     }
 }
