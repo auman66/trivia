@@ -5,14 +5,17 @@
         "answer": "B",
         "correct": "Thats right! Denver is the capital of Colorado.",
         "incorrect": "Sorry, but the correct answer is Denver.",
-        "a_media": "https://trivia-v2-1254-dev.twil.io/images/q1-capital-r.jpeg"
+        "a_media": "https://trivia-v2-1254-dev.twil.io/images/q1-capital-r.jpeg",
+        "q_media": ""
     },
     "2": {
         "q_id": "recMKPOdwgl7xakmE",
         "question": "Which National Park is in Colorado?\nA. Zion\nB. Arches\nC. Moab\nD. Great Sand Dunes ",
         "answer": "D",
         "correct": "You got it. Colorado is home to Great Sand Dunes National Park, along with Rocky Mountain, Black Canyon of the Gunnison, and Mesa Verde",
-        "incorrect": "Wrong answer. Colorado is home to Great Sand Dunes National Park. All the other parks listed are in Utah."
+        "incorrect": "Wrong answer. Colorado is home to Great Sand Dunes National Park. All the other parks listed are in Utah.",
+        "a_media": "",
+        "q_media": ""
     },
     "3": {
         "q_id": "recpOPk0O5JRzp1b1",
@@ -20,14 +23,17 @@
         "answer": "A",
         "correct": "It is the Columbine.",
         "incorrect": "Sorry, but the state flower of Colorado is the Columbine",
-        "a_media": "https://trivia-v2-1254-dev.twil.io/images/q3-columbine-r.jpeg"
+        "a_media": "https://trivia-v2-1254-dev.twil.io/images/q3-columbine-r.jpeg",
+        "q_media": ""
     },
     "4": {
         "q_id": "recpvpqVNnxiW0Yw0",
         "question": "Which Colorado city holds the record as the highest incorporated city in the US?\nA. Alma\nB. Fairplay\nC. Leadville\nD. Breckenridge",
         "answer": "C",
         "correct": "Thats right - Leadville is the highest incorporated city.",
-        "incorrect": "Not quite. Leadville is the highest incorporated city in the US (although Alma is the highest town in Colorado)"
+        "incorrect": "Not quite. Leadville is the highest incorporated city in the US (although Alma is the highest town in Colorado)",
+        "a_media": "",
+        "q_media": ""
     },
     "5": {
         "q_id": "rec32j2u019vp8eZL",
@@ -35,7 +41,8 @@
         "answer": "C",
         "correct": "You got it - 7 (3 Avalanche, 3 Broncos, and 1 Nuggets)",
         "incorrect": "Nope. The correct answer is 7 (3 Avalanche, 3 Broncos, and 1 Nuggets)",
-        "a_media": "https://trivia-v2-1254-dev.twil.io/images/q5-nuggets-r.jpeg"
+        "a_media": "https://trivia-v2-1254-dev.twil.io/images/q5-nuggets-r.jpeg",
+        "q_media": ""
     },
     "6": {
         "q_id": "recGFVQQwdFv2qM0q",
@@ -43,7 +50,8 @@
         "answer": "A",
         "correct": "Correct! Carmelo Anthony has never won a championship, let alone a finals MVP.",
         "incorrect": "Nope. The correct answer is Carmelo Anthony. Correct! He has never won a championship, let alone a finals MVP.",
-        "a_media": "https://trivia-v2-1254-dev.twil.io/images/q6-carmelo-anthony-r.jpeg"
+        "a_media": "https://trivia-v2-1254-dev.twil.io/images/q6-carmelo-anthony-r.jpeg",
+        "q_media": ""
     },
     "7": {
         "q_id": "recjkzJR1fZuEO3N1",
@@ -51,6 +59,7 @@
         "answer": "D",
         "correct": "Nice work! While its nickname is Blucifer its official name is Blue Mustang.",
         "incorrect": "Not quite. While many people call it Blucifer, its official name is Blue Mustang",
+        "a_media": "",
         "q_media": "https://trivia-v2-1254-dev.twil.io/images/q7-blucifer-q.jpeg"
     },
     "8": {
@@ -59,21 +68,26 @@
         "answer": "B",
         "correct": "Yep, it is a bear.",
         "incorrect": "Nope, its a bear.",
-        "a_media": "https://trivia-v2-1254-dev.twil.io/images/q8-bear-r.jpeg"
+        "a_media": "https://trivia-v2-1254-dev.twil.io/images/q8-bear-r.jpeg",
+        "q_media": ""
     },
     "9": {
         "q_id": "recnGu9uq4AlvJWL6",
         "question": "How many 14ers are located in Colorado?\nA. 16\nB. 34\nC. 58\nD. 72",
         "answer": "C",
         "correct": "Thats right, its 58! It would be crazy if you knew that because you climbed them all.",
-        "incorrect": "Not quite. Its actually 58."
+        "incorrect": "Not quite. Its actually 58.",
+        "a_media": "",
+        "q_media": ""
     },
     "10": {
         "q_id": "rec40o76D2LGqr3gm",
         "question": "What percent of Colorado's population lives in the city of Denver?\nA. 6%\nB. 12%\nC. 24%\nD. 48%",
         "answer": "B",
         "correct": "It is 12% - Approximately 713,000 of Colorados 5.8 million residents live in Denver.",
-        "incorrect": "Its actually 12% - Approximately 713,000 of Colorados 5.8 million residents live in Denver."
+        "incorrect": "Its actually 12% - Approximately 713,000 of Colorados 5.8 million residents live in Denver.",
+        "a_media": "",
+        "q_media": ""
     },
     "11": {
         "q_id": "recag7uynoBs4TBQj",
@@ -81,6 +95,7 @@
         "answer": "A",
         "correct": "Thats right - Denver was the 3rd busiest airport in the US and World in 2022.",
         "incorrect": "Nope. Its actually the 3rd busiest. Maybe thats why the lines are so long...",
+        "a_media": "",
         "q_media": "https://trivia-v2-1254-dev.twil.io/images/q11-dia-q.jpeg"
     },
     "12": {
@@ -88,7 +103,9 @@
         "question": "Which of these food items was first trademarked in Denver?\nA. Ice Cream Cone\nB. Peperoni Pizza\nC. Tomahawk Steak\nD. Cheeseburger",
         "answer": "D",
         "correct": "You got it! In 1935, Louis Ballast melted a slice of cheese on a hamburger at his Denver Humpty Dumpty drive-in restaurant, and patented the invention as the world's first “cheeseburger.\" ",
-        "incorrect": "Nope. In 1935, Louis Ballast melted a slice of cheese on a hamburger at his Denver Humpty Dumpty drive-in restaurant, and patented the invention as the world's first “cheeseburger.\" "
+        "incorrect": "Nope. In 1935, Louis Ballast melted a slice of cheese on a hamburger at his Denver Humpty Dumpty drive-in restaurant, and patented the invention as the world's first “cheeseburger.\" ",
+        "a_media": "",
+        "q_media": ""
     },
     "13": {
         "q_id": "recKHgy1UnibM1KDZ",
@@ -96,28 +113,35 @@
         "answer": "A",
         "correct": "Thats right! The Mammoth won in 2022 but lost in the finals this year.",
         "incorrect": "Nope. Its actually the Colorado Mammoth.",
-        "a_media": "https://trivia-v2-1254-dev.twil.io/images/q13-mammoth-r.jpeg"
+        "a_media": "https://trivia-v2-1254-dev.twil.io/images/q13-mammoth-r.jpeg",
+        "q_media": ""
     },
     "14": {
         "q_id": "recWM8GYrrk72UGFa",
         "question": "What is the tallest peak in Colorado?\nA. Pikes Peak\nB. Mount Elbert\nC. Longs Peak\nD. Marron Bells",
         "answer": "B",
         "correct": "Yes, indeed! Mount Elbert stands at 14,433 feet.",
-        "incorrect": "Thats incorrect. Its Mount Elbert which stands at 14,433 feet."
+        "incorrect": "Thats incorrect. Its Mount Elbert which stands at 14,433 feet.",
+        "a_media": "",
+        "q_media": ""
     },
     "15": {
         "q_id": "recvYE1ChfUAGqEn6",
         "question": "Which Colorado Ski Resort has the largest skiable area?\nA. Snowmass\nB. Keystone\nC. Vail\nD. Winter Park",
         "answer": "C",
         "correct": "Right on! While Snowmass has the largestAt 5,317 acres, Vail is the largest by over 2,000 acres.",
-        "incorrect": "That not it. At 5,317 acres, Vail is the largest by over 2,000 acres."
+        "incorrect": "That not it. At 5,317 acres, Vail is the largest by over 2,000 acres.",
+        "a_media": "",
+        "q_media": ""
     },
     "16": {
         "q_id": "recr3XJSXqfTCkC0a",
         "question": "Colorado may look like a rectangle, but how many sides does the state actually have?\nA. 4 (its a rectangle)\nB. 5\nC. 42\nD. 697",
         "answer": "D",
         "correct": "Wow, you got it! Cartographers are strange.",
-        "incorrect": "It sounds unbelievable, but the answer is actually 697 (look it up)!"
+        "incorrect": "It sounds unbelievable, but the answer is actually 697 (look it up)!",
+        "a_media": "",
+        "q_media": ""
     },
     "17": {
         "q_id": "recbZUkVEsMO1RhD5",
@@ -125,27 +149,34 @@
         "answer": "B",
         "correct": "Nice job - It is the Greenback Cutthroat Trout! The Rainbow Trout was the unofficial state fish from 1954-1994.",
         "incorrect": "Its actually the Greenback Cutthroat Trout. Although the Rainbow Trout was the unofficial state fish from 1954-1994.",
-        "a_media": "https://trivia-v2-1254-dev.twil.io/images/q17-trout-r.jpeg"
+        "a_media": "https://trivia-v2-1254-dev.twil.io/images/q17-trout-r.jpeg",
+        "q_media": ""
     },
     "18": {
         "q_id": "rec3gRgxn4bctpn3z",
         "question": "What percent of the land in Colorado is owned by the federal government?\nA: 12%\nB: 24%\nC: 36%\nD: 48 %",
         "answer": "C",
         "correct": "You got it! The federal government owns 36.2% of the land in Colorado. The Forest Service controls almost 2/3 of this federal land. ",
-        "incorrect": "Not quite, its actually 36%. And the Forest Service controls almost 2/3 of this federal land."
+        "incorrect": "Not quite, its actually 36%. And the Forest Service controls almost 2/3 of this federal land.",
+        "a_media": "",
+        "q_media": ""
     },
     "19": {
         "q_id": "recPi197jXYaHJovq",
         "question": "What is the official nickname of Colorado?\nA: Natural State\nB: Evergreen State\nC: Land of Enchantment\nD: Centennial State",
         "answer": "D",
         "correct": "Correct - Colorado is the Centennial State.\nThe Natural State is Arkansas\nThe Evergreen State is Washington\nThe Land of Enchantment is New Mexico",
-        "incorrect": "Wrong Answer - Colorado is the Centennial State.\nThe Natural State is Arkansas\nThe Evergreen State is Washington\nThe Land of Enchantment is New Mexico"
+        "incorrect": "Wrong Answer - Colorado is the Centennial State.\nThe Natural State is Arkansas\nThe Evergreen State is Washington\nThe Land of Enchantment is New Mexico",
+        "a_media": "",
+        "q_media": ""
     },
     "20": {
         "q_id": "recKwxyIv5v2i7HQc",
         "question": "Which famous inventor built a lab in Colorado Springs?\nA: Nikola Tesla\nB: Alexander Graham Bell\nC: Henry Ford\nD: Wilbur Wright",
         "answer": "A",
         "correct": "Right on! Nikola Tesla chose Colorado Springs for its high number of lighting strikes. ",
-        "incorrect": "Nope. It was Nikola Tesla who chose Colorado Springs for its high number of lighting strikes. "
+        "incorrect": "Nope. It was Nikola Tesla who chose Colorado Springs for its high number of lighting strikes. ",
+        "a_media": "",
+        "q_media": ""
     }
 }

@@ -18,7 +18,7 @@ exports.handler = async function (context, event, callback) {
   //Find or create the player
   let player = await base("Players")
     .select({
-      filterByFormula: `{playerID}='${md5(`collision${event.phone}`)}'`,
+      filterByFormula: `{phone}='${event.phone}'`,
     })
     .all()
     .then((records) => {

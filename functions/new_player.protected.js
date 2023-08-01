@@ -20,7 +20,7 @@ exports.handler = async function (context, event, callback) {
     .create([
       {
         fields: {
-          playerID: md5(`collision${event.phone}`),
+          phone: event.phone,
           name: event.name,
         },
       },

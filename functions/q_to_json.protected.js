@@ -27,8 +27,8 @@ exports.handler = async function (context, event, callback) {
           answer: r.fields.answer,
           correct: r.fields.correct_text,
           incorrect: r.fields.incorrect_text,
-          a_media: r.fields.response_media,
-          q_media: r.fields.question_media,
+          a_media: r.fields.response_media || "",
+          q_media: r.fields.question_media || "",
         };
       });
       return qs;
