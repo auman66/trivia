@@ -19,7 +19,7 @@
     },
     "3": {
         "q_id": "rec34Ra4OjJBVv6fL",
-        "question": "Can you SSH or RDP into an RDS instance?\nA. No\nB. Yes",
+        "question": "Can you SSH or RDP into an RDS instance(in general)?\nA. No\nB. Yes",
         "answer": "A",
         "correct": "Right, you cannot SSH or RDP into an RDS instance.",
         "incorrect": "No, you cannot SSH or RDP into an RDS instance.",
@@ -67,7 +67,7 @@
         "question": "MySQL default port number is?\nA. 3300\nB. 3306\nC. 3000\nD. 8800",
         "answer": "B",
         "correct": "That's right.",
-        "incorrect": "No, it's port 3600.",
+        "incorrect": "No, it's port 3306.",
         "a_media": "",
         "q_media": ""
     },
