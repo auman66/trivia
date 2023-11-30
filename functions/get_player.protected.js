@@ -29,6 +29,7 @@ exports.handler = async function (context, event, callback) {
           name: records[0].fields.name,
           score: records[0].fields.score,
           qCount: records[0].fields.qCount,
+          playerCode: records[0].fields.playerCode,
           new_player: false,
         };
         // If no player is found, new player needed
