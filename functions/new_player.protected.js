@@ -28,7 +28,7 @@ exports.handler = async function (context, event, callback) {
     .then((records) => {
       return {
         id: records[0].getId(),
-        playerCode: records[0].fields.playerCode,
+        playerCode: String(records[0].fields.playerCode).padStart(3, "0"),
         asked: "",
         name: event.name,
         score: 0,
