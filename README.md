@@ -1,5 +1,6 @@
 # trivia
 [![Twilio CI/CD](https://github.com/auman66/trivia/actions/workflows/main.yml/badge.svg)](https://github.com/auman66/trivia/actions/workflows/main.yml)
+
 Trivia game using Twilio Serverless + Studio and Airtable. 
 
 The airtable base can be found here: https://www.airtable.com/universe/expoG211sJu9ZcMbz/twilio-trivia-game
