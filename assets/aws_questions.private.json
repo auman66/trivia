@@ -1,0 +1,101 @@
+{
+    "1": {
+        "q_id": "recDu3WUWSuO59bAU",
+        "question": "Can you move a reserved instance from one region to another?\nA. No\nB. Yes",
+        "answer": "A",
+        "correct": "That's correct.",
+        "incorrect": "That's incorrect, you cannot move a reserved instance from one region to another",
+        "a_media": "",
+        "q_media": ""
+    },
+    "2": {
+        "q_id": "recWW7dUPtxRXfcVT",
+        "question": "What is AWS's NoSQL product?\nA. RDS\nB. DynamoDB\nC. Aurora\nD. MongoDB",
+        "answer": "B",
+        "correct": "That's correct, DynamoDB is AWS's NoSQL database offering.",
+        "incorrect": "Sorry, but it's DynamoDB.",
+        "a_media": "",
+        "q_media": ""
+    },
+    "3": {
+        "q_id": "rec34Ra4OjJBVv6fL",
+        "question": "Can you SSH or RDP into an RDS instance(in general)?\nA. No\nB. Yes",
+        "answer": "A",
+        "correct": "Right, you cannot SSH or RDP into an RDS instance.",
+        "incorrect": "No, you cannot SSH or RDP into an RDS instance.",
+        "a_media": "",
+        "q_media": ""
+    },
+    "4": {
+        "q_id": "recDEthf64khmEmvI",
+        "question": "How many regions does AWS have?\nA. 28\nB. 24\nC. 32\nD. 16",
+        "answer": "C",
+        "correct": "That's right, AWS has 32 launched regions globally.",
+        "incorrect": "Not quite, AWS has 32 launched regions globally.",
+        "a_media": "",
+        "q_media": ""
+    },
+    "5": {
+        "q_id": "recEQYbx7MetTlRJx",
+        "question": "To retrieve instance metadata or userdata you will need to use the following IP address.\nA. 0.0.0.0\nB. 192.168.0.1\nC. 127.0.0.1\nD. 169.254.169.254",
+        "answer": "D",
+        "correct": "That's correct, you can retrieve instance metadata or userdata with 169.254.169.254 IP.",
+        "incorrect": "That's incorrect, you can retrieve instance metadata or userdata with 169.254.169.254 IP.",
+        "a_media": "",
+        "q_media": ""
+    },
+    "6": {
+        "q_id": "recpfcAbxpm00tqfc",
+        "question": "You have uploaded a file to S3. Which HTTP code would indicate that the file upload was successful?\nA. 200\nB. 204\nC. 205",
+        "answer": "A",
+        "correct": "That's right.",
+        "incorrect": "Not quite, it's 200 status code.",
+        "a_media": "",
+        "q_media": ""
+    },
+    "7": {
+        "q_id": "recnLKgGlq3LIDmZN",
+        "question": "It is possible to transfer a reserved instance from one availability zone to another.\nA. True\nB. False",
+        "answer": "A",
+        "correct": "Correct, you can transfer a reserved instance from one AZ to another.",
+        "incorrect": "Incorrect, you can transfer a reserved instance from one AZ to another.",
+        "a_media": "",
+        "q_media": ""
+    },
+    "8": {
+        "q_id": "recS3HVTzDlJrOddY",
+        "question": "MySQL default port number is?\nA. 3300\nB. 3306\nC. 3000\nD. 8800",
+        "answer": "B",
+        "correct": "That's right.",
+        "incorrect": "No, it's port 3306.",
+        "a_media": "",
+        "q_media": ""
+    },
+    "9": {
+        "q_id": "recrGGO4vivVKAQjs",
+        "question": "How long can AWS Lambda Function execute?\nA. 5 min\nB. 1 min\nC. 15 min\nD. 10 min",
+        "answer": "C",
+        "correct": "That' correct, Lambda functions can be configured to run up to 15 minutes per execution.",
+        "incorrect": "Not quite, Lambda functions can be configured to run up to 15 minutes per execution.",
+        "a_media": "",
+        "q_media": ""
+    },
+    "10": {
+        "q_id": "recXStt68OTSGsWgG",
+        "question": "Which of the following are the components of AWS Infrastructure?\nA. Edge locations\nB. Regions\nC. Availability Zones\nD. All of the above",
+        "answer": "D",
+        "correct": "Correct, AWS Global Infrastructure consists of regions, availability zones and edge locations.",
+        "incorrect": "Incorrect. AWS Global Infrastructure consists of regions, availability zones and edge locations.",
+        "a_media": "",
+        "q_media": ""
+    },
+    "11": {
+        "q_id": "recucPTzbAt5LPKeu",
+        "question": "Is the IAM Service in AWS free to use?\nA. No\nB. Yes",
+        "answer": "B",
+        "correct": "That's right.",
+        "incorrect": "Not quite.",
+        "a_media": "",
+        "q_media": ""
+    }
+}
